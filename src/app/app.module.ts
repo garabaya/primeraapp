@@ -6,9 +6,13 @@ import { AppComponent } from './app.component';
 import { SobreNosotrosComponent } from './sobre-nosotros/sobre-nosotros.component';
 import { LibrosComponent } from './libros/libros.component';
 import { CabeceraComponent } from './cabecera/cabecera.component';
+import { InicioComponent } from './inicio/inicio.component';
+import { NoEncontradoComponent } from './no-encontrado/no-encontrado.component';
 
 const rutas: Routes = [
-  {path: 'listado-libros', component: LibrosComponent }
+  {path: 'listado-libros', component: LibrosComponent },
+  {path: '', component: InicioComponent, pathMatch: 'full' },
+  {path: '**', component: NoEncontradoComponent }
 ];
 
 @NgModule({
@@ -16,7 +20,9 @@ const rutas: Routes = [
     AppComponent,
     SobreNosotrosComponent,
     LibrosComponent,
-    CabeceraComponent
+    CabeceraComponent,
+    InicioComponent,
+    NoEncontradoComponent
   ],
   imports: [
     BrowserModule,
