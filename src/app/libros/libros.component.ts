@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient, HttpResponse } from '@angular/common/http';
+import { LibroclickedService } from '../libroclicked.service';
 
 @Component({
   selector: 'app-libros',
@@ -6,17 +8,35 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./libros.component.css']
 })
 export class LibrosComponent implements OnInit {
-  libros: { id: string; titulo: string; autor: string; }[];
+  libros: any;
+  errorHttp: boolean;
+  recibido: boolean;
 
-  constructor() {
-    this.libros = [
-      {id:'1', titulo: 'Te veré bajo el hielo', autor:'Robert Bryndza'},
-      {id:'2', titulo: 'Dime quién soy', autor:'Julia Navarro'},
-      {id:'3', titulo: 'El día que se perdió la cordura', autor:'Javier Castillo'}
-    ];
+  constructor(private http: HttpClient, public LibroClicked: LibroclickedService) {
+    this.recibido= false;
+    this.errorHttp= false;
   }
 
   ngOnInit(): void {
+    this.cargarLista();
+  }
+  cargarLista() {
+    this.http.get('assets/lista-libros.json').subscribe(
+      (respuesta: Response) => {this.libros = respuesta; this.recibido=true;},
+      (respuesta: Response) => {this.errorHttp = true; this.recibido=true;}
+    )
+  }
+
+  agregarLibro(_libroVisto){
+    this.LibroClicked.libroVisto(_libroVisto);
+  }
+
+  isRecibido() {
+    return this.recibido;
+  }
+
+  isError() {
+    return this.errorHttp
   }
 
 }

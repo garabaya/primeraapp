@@ -10,7 +10,7 @@ export class InformacionComponent implements OnInit {
 
   libros: Array<object>;
   libroId: number;
-  libroClick: object;
+  libroClick: any;
 
   constructor(private rutausuario:ActivatedRoute) {
     this.libros = [
