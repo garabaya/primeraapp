@@ -8,9 +8,12 @@ import { LibrosComponent } from './libros/libros.component';
 import { CabeceraComponent } from './cabecera/cabecera.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { NoEncontradoComponent } from './no-encontrado/no-encontrado.component';
+import { InformacionComponent } from './informacion/informacion.component';
 
 const rutas: Routes = [
   {path: 'listado-libros', component: LibrosComponent },
+  {path: 'informacion/:libroId', component: InformacionComponent},
+  {path: 'informacion', redirectTo: '/listado-libros'},
   {path: '', component: InicioComponent, pathMatch: 'full' },
   {path: '**', component: NoEncontradoComponent }
 ];
@@ -22,7 +25,8 @@ const rutas: Routes = [
     LibrosComponent,
     CabeceraComponent,
     InicioComponent,
-    NoEncontradoComponent
+    NoEncontradoComponent,
+    InformacionComponent
   ],
   imports: [
     BrowserModule,
