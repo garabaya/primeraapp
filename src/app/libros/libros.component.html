@@ -1,11 +1,17 @@
 <div *ngIf="!isRecibido()" class="loader"></div>
 <div *ngIf="isError()">
-    <P>Información no disponible</P>
+  <P>Información no disponible</P>
 </div>
-<ul>
-    <li *ngFor="let libro of libros">
-      <a      
-      (click)="agregarLibro(libro)"
-      [routerLink]="['/informacion', libro.id]">{{libro.titulo}}</a>
-    </li>
-</ul>
+<div class="container">
+  <div class="card-deck mb-3 text-center">
+    <div *ngFor="let libro of libros" class="card" style="width: 18rem;">
+      <img src="{{ libro.imagen }}" class="card-img-top" alt="{{ libro.titulo }}">
+      <div class="card-body">
+        <h5 class="card-title">{{ libro.titulo }}</h5>
+        <p class="card-text">{{ libro.descripcion }}</p>
+        <a class="btn btn-primary" (click)="agregarLibro(libro)" [routerLink]="['/informacion', libro.id]">+
+          Información</a>
+      </div>
+    </div>
+  </div>
+</div>
