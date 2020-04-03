@@ -13,11 +13,12 @@ export class LibrosComponent implements OnInit {
   recibido: boolean;
 
   constructor(private http: HttpClient, public LibroClicked: LibroclickedService) {
-    this.recibido= false;
-    this.errorHttp= false;
+
   }
 
   ngOnInit(): void {
+    this.recibido= false;
+    this.errorHttp= false;
     this.cargarLista();
   }
   cargarLista() {
@@ -36,7 +37,7 @@ export class LibrosComponent implements OnInit {
   }
 
   isError() {
-    return this.errorHttp
+    return this.errorHttp;
   }
 
 }
