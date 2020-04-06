@@ -3,21 +3,21 @@
     "id": 1,
     "titulo": "Te veré bajo el hielo",
     "autor": "Robert Bryndza",
-    "imagen": "https://lh3.googleusercontent.com/proxy/lbiu7LCFPnBuKTzi16AkQQtm2OmoJELKAT1f4lixkpn8s_TvKvPdffIcKQ-rjsnZOcT3GK19DTeK96my3w8o9dmpKaukXE65Q7IZDtkxzhaCzOfF",
+    "imagen": "/assets/te_vere_bajo_el_hielo.jpg",
     "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
  },
  {
     "id": 2,
     "titulo": "Dime quién soy",
     "autor": "Julia Navarro",
-    "imagen": "https://imagessl0.casadellibro.com/a/l/t5/50/9788401337550.jpg",
+    "imagen": "/assets/dime_quien_soy.jpg",
     "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
  },
  {
     "id": 3,
     "titulo": "El día que se perdió la cordura",
     "autor": "Javier Castillo",
-    "imagen": "https://imagessl2.casadellibro.com/a/l/t5/52/9788483659052.jpg",
+    "imagen": "/assets/el_dia_que_se_perdio_la_cordura.jpg",
     "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
  }
 ]
